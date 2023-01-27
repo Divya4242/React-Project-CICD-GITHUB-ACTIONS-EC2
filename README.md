@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+# Project-03
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project contains a number of operating system programs, such as page replacement algorithms, scheduling algorithms, and memory partitioning algorithms.
 
-## Available Scripts
+https://divyaprograms.azurewebsites.net/
 
-In the project directory, you can run:
+## About OS Programs
+1.	Page Replacement Algorithm :- The area of replacement policy is probably the most studied of any area of memory management. The replacement policy determines which page currently in memory is to be replaced. All of the policies have as their objective that the page to be removed should be the page least likely to be referenced in the near future. FIFO, LRU are different page replacement algorithms.
+2.	Scheduling Algorithms :- The main objective of scheduling is to allocate processor time in such a way as to optimize one or more aspects of system behaviour. Mainly the focus is on effective and efficient utilization of the processor. An example is throughput, which is the rate at which processes are completed. FCFS, SJF, Round Robin, Priority Scheduling are different algorithms.
+3.	Memory Partition :- Memory Partitioning is a technique in which if there is more than one partition freely available to accommodate a process’s request, a partition must be selected. To choose a particular partition, a partition allocation method is needed. A partition allocation method is considered better if it avoids internal fragmentation. First-Fit, Best-Fit, Worst-Fit are different techniques of memory partitioning.
 
-### `npm start`
+## Project visuals
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![image](https://user-images.githubusercontent.com/113757574/215108382-7f3d19d8-2c80-4229-9127-7f9d561a0a4c.png)
+![image](https://user-images.githubusercontent.com/113757574/215108452-6a7c0e25-dcba-40db-a57c-9765a16d9178.png)
+![image](https://user-images.githubusercontent.com/113757574/215108519-b5819179-b244-4709-8299-a5acf2530987.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
