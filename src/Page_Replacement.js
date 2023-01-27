@@ -10,12 +10,11 @@ function PageReplacement() {
 
   return (
     <body>
-      <br />
       <section className="background-radial-gradient overflow-hidden">
         <div className="container px-4 py-0 px-md-2 text-center text-lg-start my-2">
           <div className="row gx-lg-5 align-items-center mb-5" style={{textAlign:"left"}}>
             <div className="col-lg-6 mb-5 mb-lg-0">
-              <h1 className="my-5 display-5 fw-bold ls-tight" style={{ color: "#C36B84" }}> Page Replacement
+              <h1 className="my-3 display-5 fw-bold ls-tight" style={{ color: "#C36B84" }}> Page Replacement
                 <br /><span style={{ color: "#ED6B5B" }}>Algorithms</span> </h1> : <h1> </h1>
               <p className="mb-2 opacity-70" style={{ color: "#F9AC66" }}>
                 The area of replacement policy is probably the most studied of any area of

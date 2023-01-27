@@ -24,12 +24,11 @@ function Homepage() {
 
     return (
         <body>
-            <br />
             <section className="background-radial-gradient overflow-hidden">
                 <div className="container px-4 py-0 px-md-2  text-lg-start my-2">
                     <div className="row gx-lg-5 mb-5" style={{ textAlign: "left" }}>
                         <div className="col-lg-6 mb-5 mb-lg-0">
-                            <h1 className="my-5 display-5 fw-bold ls-tight" style={{ color: "#C36B84" }}> Hello, user!
+                            <h1 className="my-3 display-5 fw-bold ls-tight" style={{ color: "#C36B84" }}> Hello, user!
                                 <br /><span style={{ color: "#ED6B5B" }}>Nice to see you.</span> </h1> : <h1> </h1>
                             <p className="mb-2 opacity-70" style={{ color: "#F9AC66" }}>
                                 An OS is a program that controls the execution of application programs, and acts as

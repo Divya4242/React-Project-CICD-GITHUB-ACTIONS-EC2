@@ -11,7 +11,6 @@ function SchedulingAlgo() {
 
     return (
         <body>
-            <br /> <br />
             <section className="background-radial-gradient overflow-hidden">
                 <div className="container px-4 py-0 px-md-2 text-center text-lg-start my-2">
                     <div className="row gx-lg-5 align-items-center mb-5" style={{textAlign:"left"}}>

@@ -16,26 +16,7 @@ import { useLocation } from "react-router-dom";
 import { NavLink, useNavigate } from 'react-router-dom';
 import './appbar.css';
 
-
-const AppBar = styled(MuiAppBar, {
-    shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-    zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(['width', 'margin'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-    }),
-    ...(open && {
-        marginLeft: drawerWidth,
-        width: `calc(100% - ${drawerWidth}px)`,
-        transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    }),
-}));
 const drawerWidth = 240;
-
 
 function Navbar(props) {
     const location = useLocation();
@@ -53,7 +34,7 @@ function Navbar(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-               The OS Project
+               The OS Projectt
             </Typography>
             <Divider />
             <List >
@@ -69,18 +50,18 @@ function Navbar(props) {
     );
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="fixed" style={{ backgroundColor: "#071e3d" }} >
-                <Toolbar onClick={() => { handleDrawerToggle() }}>
+                <Toolbar position="fixed" style={{ backgroundColor: "#071e3d" }} >
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
                         edge="start"
-                        onClick={() => { navigate(`/`) }}
-                        style={{ cursor: "pointer" }}
+                        onClick={() => { navigate(`/`); handleDrawerToggle(); }}
+                        style={{ cursor: "pointer", color:"white" }}
                         sx={{ mr: 2, display: { sm: 'none' } }}
                     >
                         <MenuIcon />
-                        <Typography variant="h6" sx={{ ml: 1 }}>
+                        <Typography variant="h6" sx={{ ml: 1 }} 
+                        style={{ cursor: "pointer", color:"white" }}>
                            The OS Project
                         </Typography>
                     </IconButton>
@@ -89,7 +70,7 @@ function Navbar(props) {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, mr: 45 }}
                         onClick={() => { navigate(`/`) }}
-                        style={{ cursor: "pointer" }}
+                        style={{ cursor: "pointer", color:"white" }}
                     >
                        The OS Project
                     </Typography>
@@ -100,7 +81,6 @@ function Navbar(props) {
                         <NavLink disableScrollLock={true} className='mynavitem' id={location.pathname === "/memory_partition" ? "activenav" : ""} to="/memory_partition">Memory Partition</NavLink> &nbsp;&nbsp;&nbsp;
                     </Box>
                 </Toolbar>
-            </AppBar>
             <Drawer
                 container={container}
                 variant="temporary"
