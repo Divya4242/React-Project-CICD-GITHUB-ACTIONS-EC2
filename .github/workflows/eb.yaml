@@ -1,0 +1,49 @@
+name: Deploy React Book App from GitHub to AWS Elastic Beanstalk
+on:
+  # activates the workflow when there is a push on the main branch
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # the OS your job should run on
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - name: Checkout Latest Repo
+        # checks out your repository under the GitHub workspace so that your workflow can access it
+        uses: actions/checkout@v2
+
+      - name: Generate Deployment Package 
+        # zip all files except .git
+        run: zip -r OSFrontend.zip * -x "**.git**"
+
+      - name: Get timestamp
+        uses: gerred/actions/current-time@master
+        id: current-time
+
+      - name: Run string replace
+        uses: frabert/replace-string-action@master
+        id: format-time
+        with:
+          # replaces '[:\.]+' in the timestamp with '-'
+          pattern: '[:\.]+'
+          string: "${{ steps.current-time.outputs.time }}"
+          replace-with: '-'
+          flags: 'g'
+
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v21
+        with:
+         #  input the credentials you used to setup AWS CLI and credentials for the application environment
+          aws_access_key: "${{ secrets.ACCESS_KEY }}"
+          aws_secret_key: "${{ secrets.SECRET_ACCESS_KEY }}"
+          application_name: my-demo-app
+          environment_name: My-demo-app-env
+          version_label: "app-${{ steps.format-time.outputs.replaced }}"
+          region: ap-south-1
+          deployment_package: OSFrontend.zip
+
+      - name: Deployed!
+        run: echo App deployed to ELB
