@@ -9,13 +9,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Latest Repo
+        uses: actions/checkout@v2
       
       - run: npm install
       - run: npm run build
 
       - name: rsync deployments
-      - uses: contention/rsync-deployments@v2.0.0
+        uses: contention/rsync-deployments@v2.0.0
         with:
           FLAGS: -avzr --delete
           EXCLUDES: --exclude .htaccess --exclude /uploads/
