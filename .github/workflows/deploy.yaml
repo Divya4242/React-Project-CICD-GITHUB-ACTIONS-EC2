@@ -14,19 +14,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
-      - run: pwd  
-      - run: ls  
+          node-version: "20" 
       - run: npm ci
       - run: npm run build
 
       - name: rsync deployments
-        uses: contention/rsync-deployments@v2.0.0
+        uses: burnett01/rsync-deployments@6.0.0
         with:
-          FLAGS: -avzr --delete
-          EXCLUDES: --exclude .htaccess --exclude /uploads/
-          USER: ubuntu
-          HOST: ec2-35-154-16-135.ap-south-1.compute.amazonaws.com
-          LOCALPATH: /build/
-          REMOTEPATH: /var/www/html/
-          DEPLOY_KEY: ${{ secrets.PRIVATE_KEY }}
+          switches: -avzr --delete
+          path: build/
+          remote_path: /var/www/html/
+          remote_host: ec2-35-154-16-135.ap-south-1.compute.amazonaws.com
+          remote_user: ubuntu
+          remote_key: ${{ secrets.PRIVATE_KEY }}
