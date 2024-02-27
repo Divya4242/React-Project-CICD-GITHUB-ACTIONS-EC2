@@ -31,7 +31,7 @@ function Homepage() {
                             <h1 className="my-3 display-5 fw-bold ls-tight" style={{ color: "#C36B84" }}> Hello, user!
                                 <br /><span style={{ color: "#ED6B5B" }}>Nice to see you.</span> </h1> : <h1> </h1>
                             <p className="mb-2 opacity-70" style={{ color: "#F9AC66" }}>
-                                An OS is a program that controls the execution of application programs, and acts as
+                                Ann OS is a program that controls the execution of application programs, and acts as
                                 an interface between applications and the computer hardware. There have been four major theoretical advances in the development of operating
                                 systems: (1) Process, (2) Memory management, (3) Information protection and security, (4) Scheduling and resource management. <br />
                                 -^- A program in execution or an instance of a program running on a computer is called <b>Process</b>.<br />
