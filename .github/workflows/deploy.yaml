@@ -10,8 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Latest Repo
-        uses: actions/checkout@v2
-      
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+      - run: pwd    
       - run: npm ci
       - run: npm run build
 
