@@ -1,13 +1,21 @@
+# This workflow will transer frontend repo build to the ec2 machine,
+# the ec2 machine where build will be deploy is use to serve frontend for web application
+# When there is a push to the "main" branch in "client" repo this workflow will run.
+#
+# In FRONTEND ec2 instance nginx and node js is pre-installed.
+
 name: Deploy to production
 
 on:
   push:
     branches:
       - master
+    paths:  
+      - 'client/**'
   workflow_dispatch:
 
 jobs:
-  deploy:
+  deploy-build-in-frontend-server:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Latest Repo
