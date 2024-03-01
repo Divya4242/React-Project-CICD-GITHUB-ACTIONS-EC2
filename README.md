@@ -1,1 +1,1 @@
-#This Project is setup to deploy react(frontend) build to ec2 instance.
+# This Project is setup to deploy react(frontend) build to ec2 instance.
