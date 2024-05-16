@@ -35,14 +35,14 @@ jobs:
           remote_user: ubuntu
           remote_key: ${{ secrets.PRIVATE_KEY }}
 
-      - name: multiple command
-        uses: appleboy/ssh-action@v0.1.8
+    # Sets up SSH agent to allow SSH connections.
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
         with:
-          host: ec2-35-154-16-135.ap-south-1.compute.amazonaws.com
-          username: ubuntu
-          key: ${{ secrets.PRIVATE_KEY }}
-          port: 22
-          script: |
-            sudo systemctl restart nginx
+          ssh-private-key: ${{ secrets.PRIVATE_KEY }}
 
+     # Runs SSH commands on the EC2 machine to deploy the Docker image.
+      - name: Run SSH commands
+        run: |
+             sudo systemctl restart nginx
           
